@@ -3,3 +3,5 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+
+res.render('index', { title: "Mini Messageboard", messages: messages })
