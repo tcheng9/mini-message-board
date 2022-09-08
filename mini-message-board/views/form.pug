@@ -1,0 +1,13 @@
+extends layout 
+
+block content
+  div(class="new-message")
+    h1(class="new-message__title")= "New message"
+    form(class="c-message-form" method="POST" action="/new")
+      div(class="c-message-form__input-wrapper")
+        label(class="c-message-form__label")= "Your name"
+        input(class="c-message-form__name-input" autocomplete="off" type="text" name="messageUser" placeholder="John Smith")
+      textarea(class="c-message-form__message-input" type="text" placeholder="Enter your message text..." name="messageText")
+      div(class="new-message__actions-wrapper")
+        a(class="new-message__back" href="/")= "Go back"
+        button(class="c-message-form__submit-btn")= "Send :3"
